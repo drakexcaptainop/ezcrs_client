@@ -2,7 +2,7 @@ import shutil as sh
 from car import car 
 from cons import out 
 import time 
-from cdata import start_client, global_manager, cars_wrapper, lock_till_game_start, request_join
+from cdata import start_client, global_manager, cars_wrapper, lock_till_game_start, request_join, init_client_socket
 
 
 def recv_car_info():
@@ -10,6 +10,7 @@ def recv_car_info():
 
      
 
+init_client_socket()
 
 h = sh.get_terminal_size().lines
 w = sh.get_terminal_size().columns 

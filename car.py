@@ -13,4 +13,8 @@ class car:
     def json(self):
         return { "w": self.w, "h": self.h, "x": self.x, "y": self.y }
     
+    @staticmethod
+    def from_json( data ):
+        return car( data['w'], data['h'], data['x'], data['y'] )
+    
     
